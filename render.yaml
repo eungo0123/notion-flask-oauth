@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: notion-spell-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: INTERNAL_TOKEN
+      - key: DATABASE_ID
