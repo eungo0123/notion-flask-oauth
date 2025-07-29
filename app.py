@@ -55,7 +55,7 @@ def get_spell():
 설명: {get_text('설명')}
 고레벨에서: {get_text('고레벨에서')}"""
     return jsonify({"result": formatted})
-
+    
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+    port = int(os.environ.get("PORT", 5000))  # Render가 지정하는 포트
+    app.run(host="0.0.0.0", port=port)        # 반드시 외부 접속 가능한 IP에 바인딩
